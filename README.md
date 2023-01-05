@@ -1,2 +1,2 @@
-# PetStore
-PetStore module for the Magic Loupe app
+# Date Planner
+JX port of Apple's Date Planner SwiftUI sample
