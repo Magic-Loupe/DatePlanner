@@ -6,6 +6,7 @@ import SwiftUI
 
 struct EventList: View {
     @EnvironmentObject var eventData: EventData
+    @Environment(\.dismiss) private var dismiss
     @State private var isAddingNewEvent = false
     @State private var newEvent = Event()
     
@@ -40,6 +41,11 @@ struct EventList: View {
         }
         .navigationTitle("Date Planner")
         .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: { dismiss() }) {
+                    Image(systemName: "xmark.circle.fill")
+                }
+            }
             ToolbarItem {
                 Button {
                     newEvent = Event()
