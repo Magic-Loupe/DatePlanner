@@ -7,11 +7,11 @@ public extension JXNamespace {
     static let dateplanner: JXNamespace = "dateplanner"
 }
 
-public struct DatePlannerModule: JXModule {
+public struct DatePlannerModule: JXDynamicModule {
     public var namespace: JXNamespace = .dateplanner
 
-    public static let localURL = URL(string: "jxmodule", relativeTo: Bundle.module.resourceURL)
-    public static let remoteURL = URL(string: "Sources/DatePlanner/jxmodule", relativeTo: URL(string: "https://github.com/Magic-Loupe/DatePlanner.git"))
+    public static let localURL = URL(string: "jxmodule", relativeTo: Bundle.module.resourceURL)!
+    public static let remoteURL = URL(string: "Sources/DatePlanner/jxmodule", relativeTo: URL(string: "https://github.com/Magic-Loupe/DatePlanner.git"))!
 
     public func register(with registry: JXRegistry) throws {
         try registry.register(JXSwiftUI())
