@@ -17,7 +17,7 @@ let package = Package(
             .product(name: "JXBridge", package: "JXBridge"),
             .product(name: "JXSwiftUI", package: "JXSwiftUI"),
         ], resources: [
-            .copy("jxmodule"),
+            .copy("jx"),
         ]),
     ]
 )
